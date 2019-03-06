@@ -50,7 +50,7 @@
             const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
             
             function killArticles(arr) {
-                return arr.map(a => a.replace(/^(the|an|a)/i, '').trim());
+                return arr.map(element => element.replace(/^(the|an|a)/i, '').trim());
             }
             
             document.querySelector('#bands').innerHTML = killArticles(bands).sort((a, b) => a > b ? 1 : -1).map(element => {
